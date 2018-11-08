@@ -1,0 +1,50 @@
+* {box-sizing: border-box; margin: 0; font-family: tahoma;}
+
+nav{
+  overflow: hidden;
+  background-color: cornflowerblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+
+  a{
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: right;
+    color: white;
+  }
+
+  a:hover{
+    color: orange;
+  }
+
+  .linksRight{
+    float:right;
+  }
+}
+
+.open .icon {
+  display: none;
+}
+@media all and (max-width: 600px) {
+  .open a {display: none;}
+  .open a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .open.closed {position: relative;}
+  .open.closed .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .open.closed a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

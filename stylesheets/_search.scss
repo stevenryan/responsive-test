@@ -1,0 +1,120 @@
+.searchSection{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  input:focus{
+    outline: 0;
+  }
+
+  // OVERWATCH LOGO LINK
+
+  .logo{
+    order: 1;
+    width: 250px;
+    display: inline-block;
+    margin-left: 5%;
+
+    img{
+      max-width: 100%;
+      display: inline;
+    }
+  }
+
+  // HERO SEARCH INPUT
+
+  .searchForm{
+    order: 2;
+    margin: 0 auto;
+    font-size: 18px;
+    width: 60%;
+    padding-top: 60px;
+    .form-inline {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+
+    .form-inline label {
+      margin: 5px 10px 5px 0;
+    }
+
+    .form-inline input {
+      width: 250px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin: 5px 10px 5px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .form-inline button {
+      width: 100px;
+      border-radius: 3px;
+      padding: 10px 20px;
+      background-color: cornflowerblue;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form-inline button:hover {
+      background-color: dodgerblue;
+    }
+  }
+
+  // RESPONSIVE INPUTS
+
+  @media all and (max-width: 850px) {
+    .logo{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      img{
+        max-width: 400px;
+      }
+    }
+    .searchForm{
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      .form-inline input {
+        width: inherit;
+        margin: 10px 0;
+      }
+      .form-inline button {
+        width: inherit;
+        margin: 10px 0;
+      }
+      .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  }
+
+  .heroTypes{
+    display: flex;
+    justify-content: center;
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 15px 0;
+    .typeLink{
+      width: 200px;
+      border-radius: 3px;
+      background-color: orange;
+      padding: 5px 0;
+      margin-right: 10px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .typeLink:last-of-type {
+      margin: 0;
+    }
+    .typeLink:hover{
+      background-color: darkorange;
+    }
+  }
+}

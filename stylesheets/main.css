@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: tahoma; }
+
+nav {
+  overflow: hidden;
+  background-color: cornflowerblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px; }
+  nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: right;
+    color: white; }
+  nav a:hover {
+    color: orange; }
+  nav .linksRight {
+    float: right; }
+
+.open .icon {
+  display: none; }
+
+@media all and (max-width: 600px) {
+  .open a {
+    display: none; }
+
+  .open a.icon {
+    float: right;
+    display: block; } }
+@media all and (max-width: 600px) {
+  .open.closed {
+    position: relative; }
+
+  .open.closed .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .open.closed a {
+    float: none;
+    display: block;
+    text-align: left; } }
+.searchSection {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px; }
+  .searchSection input:focus {
+    outline: 0; }
+  .searchSection .logo {
+    order: 1;
+    width: 250px;
+    display: inline-block;
+    margin-left: 5%; }
+    .searchSection .logo img {
+      max-width: 100%;
+      display: inline; }
+  .searchSection .searchForm {
+    order: 2;
+    margin: 0 auto;
+    font-size: 18px;
+    width: 60%;
+    padding-top: 60px; }
+    .searchSection .searchForm .form-inline {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center; }
+    .searchSection .searchForm .form-inline label {
+      margin: 5px 10px 5px 0; }
+    .searchSection .searchForm .form-inline input {
+      width: 250px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin: 5px 10px 5px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd; }
+    .searchSection .searchForm .form-inline button {
+      width: 100px;
+      border-radius: 3px;
+      padding: 10px 20px;
+      background-color: cornflowerblue;
+      color: white;
+      cursor: pointer; }
+    .searchSection .searchForm .form-inline button:hover {
+      background-color: dodgerblue; }
+  @media all and (max-width: 850px) {
+    .searchSection .logo {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto; }
+      .searchSection .logo img {
+        max-width: 400px; }
+    .searchSection .searchForm {
+      width: 100%;
+      padding: 0;
+      text-align: center; }
+      .searchSection .searchForm .form-inline input {
+        width: inherit;
+        margin: 10px 0; }
+      .searchSection .searchForm .form-inline button {
+        width: inherit;
+        margin: 10px 0; }
+      .searchSection .searchForm .form-inline {
+        flex-direction: column;
+        align-items: stretch; } }
+  .searchSection .heroTypes {
+    display: flex;
+    justify-content: center;
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 15px 0; }
+    .searchSection .heroTypes .typeLink {
+      width: 200px;
+      border-radius: 3px;
+      background-color: orange;
+      padding: 5px 0;
+      margin-right: 10px; }
+      .searchSection .heroTypes .typeLink a {
+        text-decoration: none;
+        color: white; }
+    .searchSection .heroTypes .typeLink:last-of-type {
+      margin: 0; }
+    .searchSection .heroTypes .typeLink:hover {
+      background-color: darkorange; }
+
+.bannerSection {
+  height: 350px;
+  width: 100%;
+  background: url("../images/overwatch-banner.jpeg") no-repeat center;
+  background-size: cover;
+  display: flex; }
+  .bannerSection .newContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    flex-wrap: wrap;
+    width: 40%;
+    min-width: 490px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px; }
+    .bannerSection .newContent .updateTitle {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      max-width: 100%; }
+    .bannerSection .newContent .updateText {
+      padding: 10px 5px;
+      max-width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+      .bannerSection .newContent .updateText .learnLink {
+        margin-top: 15px;
+        width: 200px;
+        border-radius: 3px;
+        background-color: cornflowerblue;
+        padding: 5px 0;
+        margin-right: 10px;
+        text-align: center; }
+        .bannerSection .newContent .updateText .learnLink a {
+          text-decoration: none;
+          color: white; }
+      .bannerSection .newContent .updateText .learnLink:hover {
+        background-color: dodgerblue; }
+    .bannerSection .newContent .updateImg {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 0 0 25px; }
+  @media all and (max-width: 529px) {
+    .bannerSection .updateImg {
+      display: none; }
+    .bannerSection .newContent {
+      min-width: 90%; }
+      .bannerSection .newContent .updateTitle {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center; }
+      .bannerSection .newContent .updateText {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3; }
+        .bannerSection .newContent .updateText .learnLink {
+          margin: 50px auto 0 auto; } }
+
+#heroGallery {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px; }
+  #heroGallery .heroDiv {
+    margin: 10px;
+    text-align: center; }
+    #heroGallery .heroDiv .heroIcon {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 250px;
+      width: 250px; }
+    #heroGallery .heroDiv .heroName {
+      background-color: cornflowerblue;
+      width: 60%;
+      margin: 0 auto;
+      padding: 5px 0;
+      border-radius: 3px; }
+      #heroGallery .heroDiv .heroName a {
+        text-decoration: none;
+        color: white; }
+    #heroGallery .heroDiv .heroName:hover {
+      background-color: dodgerblue; }
+
+/*# sourceMappingURL=main.css.map */

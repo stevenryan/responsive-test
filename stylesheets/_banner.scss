@@ -1,0 +1,86 @@
+.bannerSection{
+  height: 350px;
+  width: 100%;
+  background: url("../images/overwatch-banner.jpeg") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  .newContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    flex-wrap: wrap;
+    width: 40%;
+    min-width: 490px;
+    background-color: rgba(255,255,255, .45);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+
+    .updateTitle{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      max-width: 100%;
+    }
+    .updateText{
+      padding: 10px 5px;
+      max-width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      .learnLink{
+        margin-top: 15px;
+        width: 200px;
+        border-radius: 3px;
+        background-color: cornflowerblue;
+        padding: 5px 0;
+        margin-right: 10px;
+        text-align: center;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+      .learnLink:hover{
+        background-color: dodgerblue;
+      }
+    }
+    .updateImg{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 0 0 25px;
+    }
+  }
+
+  @media all and (max-width: 529px){
+    .updateImg{
+      display:none;
+    }
+    .newContent{
+      min-width: 90%;
+      .updateTitle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+      }
+      .updateText{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        .learnLink{
+          margin: 50px auto 0 auto;
+        }
+      }
+    }
+  }
+}
